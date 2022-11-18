@@ -36,17 +36,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edttxt_username"
         android:layout_marginTop="24dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"/>
 
 
     <Button
+        android:id="@+id/loginbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Login"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edttxt_password"
-        android:layout_marginTop="24dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edttxt_password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
