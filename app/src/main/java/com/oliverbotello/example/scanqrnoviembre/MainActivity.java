@@ -2,10 +2,12 @@ package com.oliverbotello.example.scanqrnoviembre;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -29,12 +31,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         //1 recuperar el texto: username y password
-        String userText=username.getText().toString();
-        String passText=password.getText().toString();
+        String userText = username.getText().toString();
+        String passText = password.getText().toString();
         //2 comprobar las credenciales del usuario
         if(userText.equals(USERNAME)&&passText.equals(PASSWORD)){
-            //3 si sale bien, le damos acceso
+            Intent myIntent = new Intent(this, ScanActivity.class);
 
+            Toast.makeText(this, "Bienvenido ( / ^.^)/", Toast.LENGTH_SHORT).show();
+            startActivity(myIntent);
         }
         else{
             String message =getString(R.string.invalid_credentials);
